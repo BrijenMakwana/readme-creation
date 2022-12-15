@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./HomePage.css";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 export default function HomePage() {
   const [text, setText] = useState("");
@@ -17,7 +18,12 @@ export default function HomePage() {
         </textarea>
       </div>
       <div className="container markdown">
-        <ReactMarkdown className="textarea markdown-font" value={text}>
+        <ReactMarkdown
+          className="textarea markdown-font"
+          children={text}
+          value={text}
+          remarkPlugins={[remarkGfm]}
+        >
           {text}
         </ReactMarkdown>
       </div>

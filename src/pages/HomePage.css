@@ -9,7 +9,8 @@
 
 .container {
   width: 40vw;
-  height: 500px;
+  height: fit-content;
+  min-height: 500px;
   border-radius: 15px;
 }
 
@@ -18,12 +19,14 @@
 }
 
 .markdown {
-  background-color: #000;
+  border: 1px solid #000;
 }
 
 .textarea {
   width: 100%;
-  height: 100%;
+  height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
   background-color: transparent;
   outline: none;
   border: none;
@@ -37,5 +40,5 @@
 }
 
 .markdown-font {
-  color: #fff;
+  color: #000;
 }
